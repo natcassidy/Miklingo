@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi'klingo Second Level</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <script src="functionality/Mi'klingoLevel2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="stylesheets/styles.css" />
+  <link rel="stylesheet" href="stylesheets/level2styles.css"/>
+  </head>
+  <body onload="onLoadFunction()">
+    <div class="spacer layer1"></div>
+    <section>
+      <div class="container">
+        <div class="Title">Level 2 - Fill in the blank</div>
+        <div class="Home-Button">
+          <button class="nav-btn btn" role="button"
+          onclick="home()">Home</button>
+        </div>
+        <div class="Sentence" id="textfield">
+          <h1 id="textId"></h1>
+        </div>
+        <div class="Listen-Button">
+          <button class="spt-btn btn" role="button" id="select1"
+          onclick="playQuestionAudio()">Listen to Sentence</button>
+        </div>
+        <div class="button-1">
+          <button class="aud-btn btn" role="button" id="select1"
+          onclick="playAudio(0)">Play Audio</button>
+        </div>
+        <div class="button-2">
+          <button class="aud-btn btn" role="button"id="select1"
+          onclick="playAudio(1)">Play Audio</button>
+        </div>
+        <div class="button-3">
+          <button class="aud-btn btn" role="button"id="select1"
+          onclick="playAudio(2)">Play Audio</button>
+        </div>
+        <div class="HINT">
+          <button class="spt-btn btn" role="button">Hint</button>
+        </div>
+        <div class="Prev">
+          <button class="nav-btn btn" role="button" formaction="./Level1.html" onclick="previousLevel()">Previous Level</button>
+        </div>
+        <div class="Next">
+          <button class="nav-btn btn" role="button" onclick="newPage()">Proceed</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

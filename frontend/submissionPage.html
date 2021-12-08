@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body class="w-screen flex flex-col justify-center items-center bg-yellow-500 ">
+    <div class="m-8 p-8 font-sans bg-gray-600 w-4/6 shadow  ">
+        <div class="flex gap-4 items-center">
+            <p class="font-sans text-gray-200">Which level is this question for?</p>
+            <button class="p-2 font-sans my-2 bg-red-500 rounded-md text-gray-100" id="level1-button" onclick="levelChange(1)">Level 1</button>
+            <button class="p-2 font-sans my-2 bg-red-400 rounded-md text-gray-100" id="level2-button" onclick="levelChange(2)">Level 2</button>
+        </div>
+        <div class="" id="level1">
+            <form enctype="multipart/form-data" id="form1">
+                <label class="font-sans text-gray-200">Please input the link for the image for the question:</label>
+                <input name="files" type="file" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="https://examplelink.com/audio.wav " id="imageLevel1"/>
+                
+                <label class="font-sans text-gray-200">Please input the link for the audio for option 1 here:</label>
+                <input name="files" type="file" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="https://examplelink.com/audio.wav " id="audio1o1"/>
+                <label class="font-sans text-gray-200">Is this the audio for the correct or incorrect answer:</label>
+                <input name="answer1o1" type="text" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="Correct or Incorrect" id="answer1o1"/>
+                <label class="font-sans text-gray-200">Input Hint here:</label>
+                <input name="hint1o1" type="text" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="Hint" id="hint1o1"/>
+                
+                <label class="font-sans text-gray-200">Please input the link for the audio for option 2 here:</label>
+                <input name="files" type="file" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="https://examplelink.com/audio.wav" id="audio1o2"/>
+                <label class="font-sans text-gray-200">Is this the audio for the correct or incorrect answer:</label>
+                <input name="answer1o2" type="text" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="Correct or Incorrect" id="answer1o2"/>
+                <label class="font-sans text-gray-200">Input Hint here:</label>
+                <input name="hint1o2" type="text" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="Hint" id="hint1o2"/>
+                
+                <label class="font-sans text-gray-200">Please input the link for the audio for option 3 here:</label>
+                <input name="files" type="file" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="https://examplelink.com/audio.wav" id="audio1o3"/>
+                <label class="font-sans text-gray-200">Is this the audio for the correct or incorrect answer:</label>
+                <input name="answer1o3" type="text" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="Correct or Incorrect" id="answer1o3"/>
+                <label class="font-sans text-gray-200">Input Hint here:</label>
+                <input name="hint1o3"type="text" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="Hint" id="hint1o3"/>
+                <input type="submit" class="p-2 font-sans my-2 bg-red-500 focus:bg-red-700 text-white rounded-md" />
+            </form>
+        </div>
+        <div class="hidden" id="level2">
+            <form enctype="multipart/form-data" id="form2">
+                <label class="font-sans text-gray-200">Please input the text for the question here:</label>
+                <input name="questionLevel2" type="text" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="Question here with blank included " id="questionLevel2"/>
+                <label class="font-sans text-gray-200">Please input the audio for the question:</label>
+                <input type="file" name="files" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="Question here with blank included " id="audioQuestionLevel2"/>
+                
+                
+                <label class="font-sans text-gray-200">Please input the audio for option 1 here:</label>
+                <input type="file" name="files" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="https://examplelink.com/audio.wav " id="audio2o1"/>
+                <label class="font-sans text-gray-200">Is this the audio for the correct or incorrect answer:</label>
+                <input name="answer2o1" type="text" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="Correct or Incorrect" id="answer2o1"/>
+                <label class="font-sans text-gray-200">Input Hint here:</label>
+                <input name="hint2o1" type="text" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="Hint" id="hint2o1"/>
+                
+                <label class="font-sans text-gray-200">Please input the audio for option 2 here:</label>
+                <input type="file" name="files" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="https://examplelink.com/audio.wav" id="audio2o2"/>
+                <label class="font-sans text-gray-200">Is this the audio for the correct or incorrect answer:</label>
+                <input name="answer2o2" type="text" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="Correct or Incorrect" id="answer2o2"/>
+                <label class="font-sans text-gray-200">Input Hint here:</label>
+                <input name="hint2o2" type="text" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="Hint" id="hint2o2"/>
+                
+                <label class="font-sans text-gray-200">Please input the audio for option 3 here:</label>
+                <input type="file" name="files" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="https://examplelink.com/audio.wav" id="audio2o3"/>
+                <label class="font-sans text-gray-200">Is this the audio for the correct or incorrect answer:</label>
+                <input name="answer2o3" type="text" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="Correct or Incorrect" id="answer2o3"/>
+                <label class="font-sans text-gray-200">Input Hint here:</label>
+                <input name="hint2o3" type="text" class="border-transparent p-2 focus:ring-2 focus:ring-red-400 focus:outline-none my-2 w-full" placeholder="Hint" id="hint2o3"/>
+
+                <input type="submit" class="p-2 font-sans my-2 bg-red-500 focus:bg-red-700 text-white rounded-md" />
+                <!-- <button class="p-2 font-sans my-2 bg-red-500 focus:bg-red-700 text-white rounded-md" id="submit-button" onclick="onSubmit()">Submit</button> -->
+            </form>
+        </div>
+        
+        <script src="functionality/submission.js"></script>
+    </div>
+</body>
+</html>

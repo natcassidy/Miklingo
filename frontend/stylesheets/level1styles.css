@@ -1,0 +1,82 @@
+body {
+  color: #01020a;
+  background: #fffecb;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.9fr 1fr 1fr 1fr 0.7fr 1.4fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Title Title Home-Button"
+    "aud-btn1 . Picture"
+    "aud-btn2 . Picture"
+    "aud-btn3 . Picture"
+    "Hint . Proceed"
+    ". . Next";
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.Title {
+  grid-area: Title;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.5vw;
+  justify-self: start;
+  padding-left: 10vw;
+}
+
+.Home-Button {
+  grid-area: Home-Button;
+}
+
+.Next {
+  grid-area: Next;
+}
+
+.Proceed {
+  grid-area: Proceed;
+}
+
+.Hint {
+  grid-area: Hint;
+}
+
+.aud-btn1 {
+  grid-area: aud-btn1;
+}
+
+.aud-btn2 {
+  grid-area: aud-btn2;
+}
+
+.aud-btn3 {
+  grid-area: aud-btn3;
+}
+
+.Picture {
+  grid-area: Picture;
+}
+.Picture > img {
+    max-height: 40vh;
+  max-width: 40vw;
+}
+.spacer {
+  aspect-ratio: 4/3;
+  max-width: 1252px;
+  position: absolute;
+  width: 70vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  right: -20%;
+  z-index: -1;
+}
+
+.layer1 {
+  background-image: url("./tr-level2.svg");
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi'klingo First Level</title>
+    <!-- Custom JS -->
+    <script src="functionality/Mi'klingo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="stylesheets/styles.css" />
+    <link rel="stylesheet" href="stylesheets/level1styles.css" />
+  </head>
+  </style>
+  <body onload="onLoadFunction()">
+    <div class="spacer layer1"></div>
+    <div class="container">
+      <div class="Title">Level 1 - Matching</div>
+      <div class="Home-Button">
+        <button class="nav-btn btn" role="button" onclick="home()">Home</button>
+      </div>
+      <div class="Next">
+        <button class="nav-btn btn " role="button" onclick="nextLevel()">Next Level</button>
+      </div>
+      <div class="Proceed">
+        <button class="spt-btn btn" role="button" onclick="newPage()">Proceed</button>
+      </div>
+      <div class="Hint">
+        <button class="spt-btn btn" role="button" onclick="seeHint()">Hint</button>
+      </div>
+      <div class="aud-btn1">
+        <button
+          class="aud-btn btn"
+          role="button"
+          id="select1"
+          onclick="playAudio(0)"
+        >
+          Play Audio
+        </button>
+      </div>
+      <div class="aud-btn2">
+        <button
+          class="aud-btn btn"
+          role="button"
+          id="select2"
+          onclick="playAudio(1)"
+        >
+          Play Audio
+        </button>
+      </div>
+      <div class="aud-btn3">
+        <button
+          class="aud-btn btn"
+          role="button"
+          id="select3"
+          onclick="playAudio(2)"
+        >
+          Play Audio
+        </button>
+      </div>
+      <div class="Picture">
+        <img
+              id="displayPic"
+            /></div>
+    </div>
+  </body>
+</html>
