@@ -37,8 +37,8 @@ function playAudio(input) {
   })
     function play() {
       var filename = currentQuestion.responses[`option${input + 1}`].hint;
-      var audio = new Audio(`https://ugdev.cs.smu.ca/~group16/backend/public/files/${currentQuestion.responses[`option${input + 1}`].audioLink}`)
-      console.log('The audio link is ', `https://ugdev.cs.smu.ca/~group16/backend/public/files/${currentQuestion.responses[`option${input + 1}`].audioLink}`)
+      var audio = new Audio(`http://ugdev.cs.smu.ca/~group16/backend/public/files/${currentQuestion.responses[`option${input + 1}`].audioLink}`)
+      console.log('The audio link is ', `http://ugdev.cs.smu.ca/~group16/backend/public/files/${currentQuestion.responses[`option${input + 1}`].audioLink}`)
       audio.play()
     }
     play();
@@ -47,8 +47,8 @@ function playAudio(input) {
 function playQuestionAudio() {
   Swal.fire(`Play audio for option the phrase now`)
     function play() {
-      var audio = new Audio(`https://ugdev.cs.smu.ca/~group16/backend/public/files/${currentQuestion.audioLinkQuestion}`)
-      console.log('The audio link is ', `https://ugdev.cs.smu.ca/~group16/backend/public/files/${currentQuestion.audioLinkQuestion}`)
+      var audio = new Audio(`http://ugdev.cs.smu.ca/~group16/backend/public/files/${currentQuestion.audioLinkQuestion}`)
+      console.log('The audio link is ', `http://ugdev.cs.smu.ca/~group16/backend/public/files/${currentQuestion.audioLinkQuestion}`)
       audio.play()
     }
     play()
