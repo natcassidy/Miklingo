@@ -24,8 +24,8 @@ function playAudio(input) {
   })
   function play() {
     var filename = currentQuestion.responses[`option${input + 1}`].hint;
-    var audio = new Audio(`https://ugdev.cs.smu.ca/~group16/backend/public/files/${currentQuestion.responses[`option${input + 1}`].audioLink}`)
-    console.log('The audio link is ', `https://ugdev.cs.smu.ca/~group16/backend/public/files/${currentQuestion.responses[`option${input + 1}`].audioLink}`)
+    var audio = new Audio(`http://ugdev.cs.smu.ca/~group16/backend/public/files/${currentQuestion.responses[`option${input + 1}`].audioLink}`)
+    console.log('The audio link is ', `http://ugdev.cs.smu.ca/~group16/backend/public/files/${currentQuestion.responses[`option${input + 1}`].audioLink}`)
     audio.play()
   }
   play();
@@ -50,7 +50,7 @@ function onLoadFunction() {
       console.log("This is the data", data)
       questionsMongo = data
       currentQuestion = questionsMongo[Math.floor((Math.random() * questionsMongo.length))]
-      document.getElementById('displayPic').setAttribute("src", `https://ugdev.cs.smu.ca/~group16/backend/public/files/${currentQuestion.imageLink}`)
+      document.getElementById('displayPic').setAttribute("src", `http://ugdev.cs.smu.ca/~group16/backend/public/files/${currentQuestion.imageLink}`)
     })
     .catch(err => console.log(err))
 
@@ -81,7 +81,7 @@ function newPage() {
     currentQuestion = questionsMongo[Math.floor((Math.random() * questionsMongo.length))]
 
     //Sets new question
-    document.getElementById('displayPic').setAttribute("src", 'https://ugdev.cs.smu.ca/~group16/backend/public/files/${currentQuestion.imageLink}')
+    document.getElementById('displayPic').setAttribute("src", `http://ugdev.cs.smu.ca/~group16/backend/public/files/${currentQuestion.imageLink}`)
   }
 }
 
